@@ -1,0 +1,17 @@
+[package]
+name = "ex_html5ever"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[lib]
+name = "ex_html5ever"
+path = "src/lib.rs"
+crate-type = ["dylib"]
+
+[dependencies]
+rustler = {git = "https://github.com/rusterlium/rustler"}
+html5ever = "0.25.1"
+regex = "1"
+lazy_static = "1.4.0"
+
