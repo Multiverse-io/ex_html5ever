@@ -5,7 +5,5 @@ defmodule ExHtml5ever.Native do
 
   def lint(_html_string), do: error()
 
-  def lint_fragment(_hmtl_fragment_string), do: error()
-
   defp error(), do: :erlang.nif_error(:nif_not_loaded)
 end
