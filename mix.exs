@@ -21,9 +21,9 @@ defmodule ExHtml5ever.MixProject do
     [
       {:plug, "~> 1.11"},
       {:rustler,
-      git: "git://github.com/rusterlium/rustler",
-      sparse: "rustler_mix",
-      tag: "49a3c26c35e86f652ce64dc5e359d7cdfd179274"}
+       git: "git://github.com/rusterlium/rustler",
+       sparse: "rustler_mix",
+       tag: "49a3c26c35e86f652ce64dc5e359d7cdfd179274"}
     ]
   end
 end
