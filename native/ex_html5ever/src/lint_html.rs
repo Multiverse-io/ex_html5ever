@@ -6,7 +6,7 @@ use std::io::Read;
 use html5ever::tendril::*;
 use html5ever::tree_builder::{ElementFlags, NodeOrText, QuirksMode, TreeSink};
 use html5ever::{expanded_name, local_name, namespace_url, ns, parse_document};
-use html5ever::{Attribute, ExpandedName, QualName};
+use html5ever::{Attribute, ExpandedName, QualName, ParseOpts};
 
 pub fn lint(input: String) -> Vec<(u64, String)> {
     return lint_from_read(&mut input.as_bytes());
@@ -21,7 +21,16 @@ fn lint_from_read<R: Read>(r: &mut R) -> Vec<(u64, String)> {
         line_number: 1,
     };
 
-    parse_document(sink, Default::default())
+    let parse_opts: ParseOpts = Default::default();
+
+    // You can get extra detail in the error messages like this, but the extra
+    // info doesn't seem particularly useful.
+    //
+    // let mut parse_opts: ParseOpts = Default::default();
+    // parse_opts.tokenizer.exact_errors = true;
+    // parse_opts.tree_builder.exact_errors = true;
+
+    parse_document(sink, parse_opts)
         .from_utf8()
         .read_from(r)
         .unwrap();
