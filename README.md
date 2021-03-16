@@ -1,21 +1,6 @@
 # ExHtml5ever
 
-**TODO: Add description**
+**This repo contains some example code showing the use of html5ever from Elixir to
+check the validity of HTML. It's not intended to be used as-is as a library.**
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_html5ever` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:ex_html5ever, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ex_html5ever](https://hexdocs.pm/ex_html5ever).
-
+You'll need to install [rustup](https://rustup.rs/).
