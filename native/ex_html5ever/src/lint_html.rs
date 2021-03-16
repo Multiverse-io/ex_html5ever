@@ -6,7 +6,7 @@ use std::io::Read;
 use html5ever::tendril::*;
 use html5ever::tree_builder::{ElementFlags, NodeOrText, QuirksMode, TreeSink};
 use html5ever::{expanded_name, local_name, namespace_url, ns, parse_document};
-use html5ever::{Attribute, ExpandedName, QualName, ParseOpts};
+use html5ever::{Attribute, ExpandedName, ParseOpts, QualName};
 
 pub fn lint(input: String) -> Vec<(u64, String)> {
     return lint_from_read(&mut input.as_bytes());
