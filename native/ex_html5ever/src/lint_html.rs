@@ -9,7 +9,7 @@ use html5ever::{expanded_name, local_name, namespace_url, ns, parse_document};
 use html5ever::{Attribute, ExpandedName, ParseOpts, QualName};
 
 pub fn lint(input: String) -> Vec<(u64, String)> {
-    return lint_from_read(&mut input.as_bytes());
+    lint_from_read(&mut input.as_bytes())
 }
 
 fn lint_from_read<R: Read>(r: &mut R) -> Vec<(u64, String)> {
@@ -35,7 +35,7 @@ fn lint_from_read<R: Read>(r: &mut R) -> Vec<(u64, String)> {
         .read_from(r)
         .unwrap();
 
-    return parse_errors;
+    parse_errors
 }
 
 struct Sink<'a> {
