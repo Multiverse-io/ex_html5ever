@@ -53,6 +53,7 @@ impl<'a> Sink<'a> {
     }
 }
 
+// Mostly copy pasta from https://github.com/servo/html5ever/blob/master/html5ever/examples/noop-tree-builder.rs
 impl<'a> TreeSink for Sink<'a> {
     type Handle = usize;
     type Output = Self;
